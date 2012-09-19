@@ -1,0 +1,389 @@
+@import "bootstrap/bootstrap.less";
+@import "elements.less";
+
+body {
+  color:#222;
+  font:18px/36px 'Arvo', serif;
+  letter-spacing:0.15em;
+  padding-top:600px;
+}
+
+//
+@import "bootstrap/responsive.less";
+
+
+.box-sizing(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================================
+    Values
+    ======================================================================== */
+
+// Sizes
+@headerHeight: 600px;
+
+// Colors
+@blue: #1a639b;
+
+
+
+/* ============================================================================
+    Buttons
+    ======================================================================== */
+
+.btn{
+  background:@blue;
+  color:#fff;
+  display:inline-block;
+  font:18px/60px 'Arvo', serif;
+  height:60px;
+  text-align:center;
+  width:230px;
+
+  &:hover{
+    background:lighten(@blue, 4);
+    color:#fff;
+    text-decoration:none;
+  }
+
+  &:active{
+    background:@blue;
+  }
+}
+
+
+
+  /* ============================================================================
+    Icons
+    ======================================================================== */
+.ic{
+  background:url(/img/ic.png) 0 0 no-repeat;
+  display:inline-block;
+  position:relative;
+  vertical-align:middle
+}
+
+.cup-drop{
+  bottom:2px;
+  height:44px;
+  left:2px;
+  width:41px;
+}
+
+
+/* ===== Primary Styles ========================================================
+   Author: Scott Corgan
+   ========================================================================== */
+
+
+.center{
+  text-align:center;
+}
+
+/*  wrapper
+==============================================================================*/
+#wrapper{
+  background:#fff;
+  position:relative;
+  z-index:2;
+}
+
+
+/*  header
+==============================================================================*/
+#header{
+  color:#fff;
+  font:14px/14px 'Arvo', serif;
+  height:@headerHeight;
+  overflow:hidden;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1;
+
+  .bg{
+    height:auto;
+    left:50%;
+    margin-left:-50%;
+    min-width:1200px;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:1;
+  }
+
+  .tri{
+    left:50%;
+    margin-left:-402px;
+    position:absolute;
+    top:0;
+    width:804px;
+    z-index:1;
+  }
+
+  header{
+    // background:red;
+    height:@headerHeight;
+    padding:100px 0 0 0;
+    position:relative;
+    z-index:2;
+
+    .box-sizing();
+  }
+
+  nav{
+    padding:0 0 100px;
+    text-align:center;
+    text-transform:uppercase;
+
+    a{
+      color:#fff;
+      display:inline-block;
+      float:right;
+
+      &:first-child{
+        float:left;
+      }
+    }
+  }
+
+  .products{
+    padding:0 0 60px 0;
+  }
+
+  .logo{
+    display:inline-block;
+    text-align:center;
+    width:208px;
+
+    left:50%;
+    margin-left:-104px;
+    position:absolute;
+    top:214px;
+
+    a{
+      background:url('/img/rcm-food-service-logo.png') 50% 50% no-repeat;
+      display:inline-block;
+      height:210px;
+      margin:0 auto;
+      text-align:center;
+      text-indent:-999em;
+      width:208px;
+
+      &:hover{
+        .opacity(90);
+      }
+
+      &:active{
+        .opacity(100);
+      }
+    }
+  }
+
+  .prod{
+    display:inline-block;
+    height:210px;
+    margin:0;
+    text-align:center;
+    text-indent:-999em;
+    width:20%;
+    .box-sizing();
+
+    &.cups{
+      background:url('/img/rcm-food-service-cups.png') 0 50% no-repeat;
+    }
+
+    &.containers{
+      background:url('/img/rcm-food-service-containers.png') 0 50% no-repeat;
+    }
+
+    &.plasticware{
+      background:url('/img/rcm-food-service-plasticware-cutlery.png') 100% 50% no-repeat;
+    }
+
+    &.straws{
+      background:url('/img/rcm-food-service-straws-cold-cups.png') 100% 50% no-repeat;
+    }
+  }
+
+  .number{
+    font-size:16px;
+    text-align:center;
+  }
+}
+
+/*  About
+============================================================= */
+#about{
+  padding:70px 0;
+  text-align:center;
+
+  h2{
+    color:#aaaaaa;
+    font:16px/16px Helvetica, Arial, sans-serif;
+    margin:0 0 60px 0;
+    padding:0;
+    text-transform:uppercase;
+
+    span{
+      display:inline-block;
+      padding:0 0 0 15px;
+
+      &:first-child{
+        padding:0 15px 0 0;
+      }
+    }
+
+    .perf{
+      letter-spacing:0.2em;
+    }
+  }
+
+  .intro{
+    margin:0 0 70px 0;
+  }
+}
+
+
+
+/*  Brands
+============================================================= */
+#brands{
+  background:#f7f7f7;
+  border:1px solid #f1f1f1;
+  border-left:0;
+  border-right:0;
+  padding:70px 0;
+
+  h2{
+    font:500 28px/28px 'Arvo', serif;
+  }
+
+  h3{
+    font:500 18px/18px 'Arvo', serif;
+    letter-spacing:0.1em;
+    margin:0;
+    padding:40px 0 70px;
+  }
+
+  h4{
+    color:#888;
+    font:500 14px/24px Helvetica, Arial, sans-serif;
+    margin:0 0 60px 0;
+  }
+
+  .row{
+
+  }
+
+  .span3{
+    background:#fff;
+    display:block;
+    margin-bottom:20px;
+
+    img{
+      background:#000;
+      display:inline-block;
+      height:100%;
+      margin:0 auto;
+      max-height:245px;
+      max-width:270px;
+      width:100%;
+    }
+  }
+
+  .fork{
+    background:url('/img/rcm-food-service-fork.png') 50% 50% no-repeat;
+    display:inline-block;
+    height:13px;
+    margin:40px 0 32px;
+    text-indent:-999em;
+    width:87px;
+  }
+}
+
+
+
+
+/*  Contact
+============================================================= */
+#contact{
+  padding:70px 0;
+  text-align:center;
+
+  h2{
+    font:500 28px/28px 'Arvo', serif;
+    padding:0 0 70px;
+  }
+
+  #contactForm{
+    margin:0 auto;
+    width:350px;
+
+    label{
+      font:15px/15px 'Arvo', serif;
+      margin:0;
+      padding:0 0 10px;
+      width:100%;
+      text-align:center;
+    }
+
+    input[type=text],textarea{
+      text-align:center;
+      color:#333;
+      padding:10px 15px;
+      margin:0 0 40px;
+      display:inline-block;
+      font:italic 700 14px/14px 'Arvo', serif;
+      width:320px;
+      .border-radius(0, 0, 0, 0);
+    }
+
+    textarea{
+      height:160px;
+    }
+
+    .btn{
+      margin-top:30px;
+    }
+  }
+}
+
+
+
+
+
+/*  Footer
+============================================================= */
+#footer{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+@import "responsive.less";
+
+
+
+
+
+
+
+
