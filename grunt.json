@@ -1,0 +1,30 @@
+{
+  "name": "rcm",
+  "title": "RCM Website",
+  "description": "RCM Website",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": {
+    "name": "Scott Corgan",
+    "email": "scottcorgan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottcorgan/rcm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scottcorgan/rcm/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/scottcorgan/grunt/blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "https://github.com/scottcorgan/grunt/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {},
+  "keywords": []
+}
