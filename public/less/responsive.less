@@ -8,12 +8,107 @@
   }
 }
 
+@media (max-width: 1199px) {
+  #about{
+    .intro{
+      span{
+        display:inline;
+        font: 15px/34px 'Arvo', serif !important;
+        letter-spacing: 0.10em !important;
+      }
+    }
+  }
+}
+
 
 /*  @media (min-width: 768px) and (max-width: 979px
 ==============================================================================*/
 @media (min-width: 768px) and (max-width: 979px) {
+  #header nav a{
+    margin-left:30px;
+  }
+
+  #header{
+    height:400px;
+
+    header{
+      padding:30px 0 0;
+
+      .span4{
+        float:none;
+        margin:0 auto;
+        width:300px;
+      }
+    }
+
+    .logo{
+      top:85px;
+
+      a{
+        background-size:80% 80%;
+      }
+    }
+
+    .prod{
+      &.cups{
+        background-position:30% 48%;
+        background-size:28%
+      }
+
+      &.containers{
+        background-size:50%
+      }
+
+      &.plasticware{
+        background-size:30%;
+      }
+
+      &.straws{
+        background-position:80% 48%;
+        background-size:28%;
+      }
+    }
+
+    .products{
+      padding-bottom:20px;
+    }
+
+    nav{
+      padding-bottom:54px;
+    }
+  }
+
   body{
-    padding-top:600px;
+    padding-top:400px;
+  }
+
+  #brands{
+    h2{
+      font-size:22px;
+      line-height:22px;
+    }
+  }
+}
+
+/*  iPad Only
+==============================================================================*/
+@media (max-device-width: 1024px) {
+  body{
+    padding-top:0;
+  }
+
+  #header{
+    position:relative;
+
+    .tri{
+      margin-left:-383px;
+    }
+
+    .prod{
+      position:relative;
+      top:-7px;
+      
+    }
   }
 }
 
@@ -24,6 +119,28 @@
   #header{
     height:200px;
     position:relative;
+
+    .number{
+      position:relative;
+      z-index:10;
+    }
+
+    .logo{
+      top:-30px;
+
+      a{
+        background-size:50%;
+      }
+    }
+
+    .products{
+      padding-bottom:55px;
+    }
+
+    .bg{
+      margin-left:-400px;
+      min-width:800px;
+    }
   }
 
   #about,
@@ -37,22 +154,50 @@
 /*  @media (max-width: 480px)
 ==============================================================================*/
 @media (max-width: 480px){
+  .btn{
+    width:270px;
+  }
+
   #header{
     height:200px;
     position:relative;
+
+    .number{
+      position:relative;
+      z-index:10;
+    }
+
+    .products{
+      padding-bottom:55px;
+    }
 
     .bg{
       margin-left:-300px;
       min-width:600px;
     }
+
+    
   }
 
   #about{
-    padding-top:30px;
-    padding-bottom:30px;
+    .intro{
+      margin-bottom:50px;
+
+      span{
+        display:inline;
+        font: 14px/22px 'Arvo', serif !important;
+        letter-spacing: 0.10em !important;
+        
+      }
+    }
+  }
+
+  #about{
+    padding-top:20px;
+    padding-bottom:40px;
 
     h2{
-      margin:0 0 30px;
+      margin:0 0 10px;
 
       * {
         font-size:12px;
@@ -68,6 +213,57 @@
 
     .cup-drop{
       margin:20px auto;
+    }
+  }
+
+  #brands{
+    padding:40px 0;
+
+    h2{
+      font:500 16px/16px 'Arvo', serif;
+    }
+
+    h3{
+      font:500 17px/26px 'Arvo', serif;
+      letter-spacing:0;
+      padding:20px 0 40px;
+    }
+
+    h4{
+      font:500 12px/18px Helvetica, Arial, sans-serif;
+      margin:0 0 40px 0;
+    }
+
+    .fork{
+      background-size:70%;
+      margin:30px 0 12px;
+    }
+  }
+
+  #contact{
+    padding:50px 0 30px;
+
+    h2{
+      font:500 22px/22px 'Arvo', serif;
+      padding:0 0 50px;
+    }
+
+    #contactForm{
+      width:280px;
+
+      input[type=text],input[type=email],input[type=number],input[type=tel],textarea{
+        width:230px;
+      }
+
+      textarea{
+        margin-bottom:15px;
+      }
+    }
+  }
+
+  #footer{
+    .logo{
+      padding:15px 0 40px;
     }
   }
 }

@@ -8,7 +8,9 @@ html(class="no-js lt-ie9 lt-ie8 lt-ie7")
 
     meta(name='description', content='')
     meta(name='author', content='Scott Corgan')
-    meta(name='viewport', content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0")
+    meta(name='viewport', content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0,user-scalable=0")
+    meta(name="format-detection", content="telephone=no")
+      
 
     title Southern California Distribution | RCM Food Service
 
@@ -21,22 +23,22 @@ html(class="no-js lt-ie9 lt-ie8 lt-ie7")
     
     div#header
       img.bg(src='/img/header_bg.jpg', title='RCM - Food Service Distribution in Southern California')
-      img.tri(src='/img/triangle.png')
+      img.tri.hidden-phone(src='/img/triangle.png')
       header.container
         .row
-          nav.span4.offset4.clearfix
+          nav.span4.offset4.clearfix.hidden-phone
             a(href='', title='About RCM - RCM Food Service - Souther California') About RCM
             a(href='', title='Contact RCM - RCM Food Service - Souther California') Contact RCM
         .row.products
-          .prod.cups cups
-          .prod.containers containers
-          .prod &nbsp;
+          .prod.cups.hidden-phone cups
+          .prod.containers.hidden-phone containers
+          .prod.hidden-phone &nbsp;
           .logo
             h1
               a(href='/', title='RCM Food Service - Souther California Food and Coffee Distribution')
                 | RCM Food Service - Souther California
-          .prod.plasticware plasticware
-          .prod.straws cold cups
+          .prod.plasticware.hidden-phone plasticware
+          .prod.straws.hidden-phone cold cups
         .row.number
           .span12 714-992-2500
 
@@ -53,13 +55,11 @@ html(class="no-js lt-ie9 lt-ie8 lt-ie7")
           .row
             .span8.offset2
               p.intro
-                |At RCM, we believe that expectations are simply meant to be exceeded. That’s why, for 24 years, we’ve been tirelessly pursuing distribution
+                span At RCM, we believe that expectations are simply meant to be exceeded. That’s why, for 24 years, we’ve been tirelessly pursuing distribution 
+                span perfection in Southern California. Whether your perfect cup 
+                span of coffee needs a jacket, or your summer smoothie needs 
+                span a straw, let our products compliment your products. 
                 br
-                | perfection in Southern California. Whether your perfect cup
-                br
-                | of coffee needs a jacket, or your summer smoothie needs
-                br
-                | a straw, let our products compliment your products.
           .row
             .span12
               a.btn(href='') Contact Us Today!
@@ -114,21 +114,26 @@ html(class="no-js lt-ie9 lt-ie8 lt-ie7")
                   input#companyName(type='text', name='companyName')
 
                   label(for='email') Email
-                  input#email(type='text', name='email')
+                  input#email(type='email', name='email')
 
                   label(for='phoneNumber') Phone Number
-                  input#phoneNumber(type='text', name='phoneNumber')
+                  input#phoneNumber(type='tel', name='phoneNumber')
 
                   label(for='message') Message
                   textarea#message(name='message')
 
                   a.btn(href='') Send
+                
 
       footer#footer
         .container
           .row
             .span12
-              | footer
+              hr
+              .logo
+                h2
+                  a(href='/') RcmFoodService.com
+                h3 Distribution Perfection
 
 
 

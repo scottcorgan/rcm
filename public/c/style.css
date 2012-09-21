@@ -1,82 +1,3 @@
-/*---------------------------------------------------
-    LESS Elements 0.6
-  ---------------------------------------------------
-    A set of useful LESS mixins by Dmitry Fadeyev
-    Special thanks for mixin suggestions to:
-      Kris Van Herzeele,
-      Benoit Adam,
-      Portenart Emile-Victor,
-      Ryan Faerman
-
-    More info at: http://lesselements.com
------------------------------------------------------*/
-
-/*  @media (min-width: 1200px) 
-==============================================================================*/
-
-@media (min-width: 1200px) {
-  #brands .span3 {
-    margin-bottom: 30px;
-  }
-}
-
-/*  @media (min-width: 768px) and (max-width: 979px
-==============================================================================*/
-
-@media (min-width: 768px) and (max-width: 979px) {
-  body {
-    padding-top: 600px;
-  }
-}
-
-/*  @media (max-width: 767px)
-==============================================================================*/
-
-@media (max-width: 767px) {
-  #header {
-    position: relative;
-    height: 200px;
-  }
-  #about,
-  #brands .container {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-}
-
-/*  @media (max-width: 480px)
-==============================================================================*/
-
-@media (max-width: 480px) {
-  #header {
-    position: relative;
-    height: 200px;
-  }
-  #header .bg {
-    min-width: 600px;
-    margin-left: -300px;
-  }
-  #about {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  #about h2 {
-    margin: 0 0 30px;
-  }
-  #about h2 * {
-    font-size: 12px;
-  }
-  #about h2 .cup-drop {
-    left: -2px;
-    width: 20px;
-    height: 22px;
-    background-size: 100% 100%;
-  }
-  #about .cup-drop {
-    margin: 20px auto;
-  }
-}
-
 /*!
  * Bootstrap v2.0.4
  *
@@ -8214,7 +8135,7 @@ body {
   width: 100%;
   height: 600px;
   overflow: hidden;
-  font: 14px/14px 'Arvo', serif;
+  font: 15px/15px 'Arvo', serif;
   color: #fff;
 }
 
@@ -8251,7 +8172,6 @@ body {
 #header nav {
   padding: 0 0 100px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 #header nav a {
@@ -8347,8 +8267,10 @@ body {
 ============================================================= */
 
 #about {
+  position: relative;
   padding: 70px 0;
   text-align: center;
+  background: #fff;
 }
 
 #about h2 {
@@ -8374,6 +8296,10 @@ body {
 
 #about .intro {
   margin: 0 0 70px 0;
+}
+
+#about .intro span {
+  display: block;
 }
 
 /*  Brands
@@ -8411,7 +8337,7 @@ body {
 }
 
 #brands .span3 img {
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 100%;
   max-width: 270px;
@@ -8433,8 +8359,10 @@ body {
 ============================================================= */
 
 #contact {
+  position: relative;
   padding: 70px 0;
   text-align: center;
+  background: #fff;
 }
 
 #contact h2 {
@@ -8444,6 +8372,7 @@ body {
 
 #contact #contactForm {
   width: 350px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -8456,10 +8385,13 @@ body {
 }
 
 #contact #contactForm input[type=text],
+#contact #contactForm input[type=email],
+#contact #contactForm input[type=number],
+#contact #contactForm input[type=tel],
 #contact #contactForm textarea {
   display: inline-block;
-  width: 320px;
-  padding: 10px 15px;
+  width: 300px;
+  padding: 10px 20px;
   margin: 0 0 40px;
   font: italic 700 14px/14px 'Arvo', serif;
   color: #333;
@@ -8492,6 +8424,31 @@ body {
 /*  Footer
 ============================================================= */
 
+#footer {
+  position: relative;
+  overflow: hidden;
+  color: #222;
+}
+
+#footer .logo {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0 60px;
+  text-align: center;
+}
+
+#footer .logo h2 {
+  font: 500 20px/36px 'Arvo', serif;
+}
+
+#footer .logo h3 {
+  font: 500 12px/12px 'Arvo', serif;
+}
+
+#footer .logo a {
+  color: #222;
+}
+
 /*  @media (min-width: 1200px) 
 ==============================================================================*/
 
@@ -8501,12 +8458,83 @@ body {
   }
 }
 
+@media (max-width: 1199px) {
+  #about .intro span {
+    display: inline;
+    font: 15px/34px 'Arvo', serif !important;
+    letter-spacing: 0.10em !important;
+  }
+}
+
 /*  @media (min-width: 768px) and (max-width: 979px
 ==============================================================================*/
 
 @media (min-width: 768px) and (max-width: 979px) {
+  #header nav a {
+    margin-left: 30px;
+  }
+  #header {
+    height: 400px;
+  }
+  #header header {
+    padding: 30px 0 0;
+  }
+  #header header .span4 {
+    float: none;
+    width: 300px;
+    margin: 0 auto;
+  }
+  #header .logo {
+    top: 85px;
+  }
+  #header .logo a {
+    background-size: 80% 80%;
+  }
+  #header .prod.cups {
+    background-position: 30% 48%;
+    background-size: 28%;
+  }
+  #header .prod.containers {
+    background-size: 50%;
+  }
+  #header .prod.plasticware {
+    background-size: 30%;
+  }
+  #header .prod.straws {
+    background-position: 80% 48%;
+    background-size: 28%;
+  }
+  #header .products {
+    padding-bottom: 20px;
+  }
+  #header nav {
+    padding-bottom: 54px;
+  }
   body {
-    padding-top: 600px;
+    padding-top: 400px;
+  }
+  #brands h2 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+/*  iPad Only
+==============================================================================*/
+
+@media (max-device-width: 1024px) {
+  body {
+    padding-top: 0;
+  }
+  #header {
+    position: relative;
+  }
+  #header .tri {
+    margin-left: -383px;
+  }
+  #header .prod {
+    position: relative;
+    top: -7px;
   }
 }
 
@@ -8517,6 +8545,23 @@ body {
   #header {
     position: relative;
     height: 200px;
+  }
+  #header .number {
+    position: relative;
+    z-index: 10;
+  }
+  #header .logo {
+    top: -30px;
+  }
+  #header .logo a {
+    background-size: 50%;
+  }
+  #header .products {
+    padding-bottom: 55px;
+  }
+  #header .bg {
+    min-width: 800px;
+    margin-left: -400px;
   }
   #about,
   #brands .container {
@@ -8529,20 +8574,38 @@ body {
 ==============================================================================*/
 
 @media (max-width: 480px) {
+  .btn {
+    width: 270px;
+  }
   #header {
     position: relative;
     height: 200px;
+  }
+  #header .number {
+    position: relative;
+    z-index: 10;
+  }
+  #header .products {
+    padding-bottom: 55px;
   }
   #header .bg {
     min-width: 600px;
     margin-left: -300px;
   }
+  #about .intro {
+    margin-bottom: 50px;
+  }
+  #about .intro span {
+    display: inline;
+    font: 14px/22px 'Arvo', serif !important;
+    letter-spacing: 0.10em !important;
+  }
   #about {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
   #about h2 {
-    margin: 0 0 30px;
+    margin: 0 0 10px;
   }
   #about h2 * {
     font-size: 12px;
@@ -8556,4 +8619,273 @@ body {
   #about .cup-drop {
     margin: 20px auto;
   }
+  #brands {
+    padding: 40px 0;
+  }
+  #brands h2 {
+    font: 500 16px/16px 'Arvo', serif;
+  }
+  #brands h3 {
+    padding: 20px 0 40px;
+    font: 500 17px/26px 'Arvo', serif;
+    letter-spacing: 0;
+  }
+  #brands h4 {
+    margin: 0 0 40px 0;
+    font: 500 12px/18px Helvetica, Arial, sans-serif;
+  }
+  #brands .fork {
+    margin: 30px 0 12px;
+    background-size: 70%;
+  }
+  #contact {
+    padding: 50px 0 30px;
+  }
+  #contact h2 {
+    padding: 0 0 50px;
+    font: 500 22px/22px 'Arvo', serif;
+  }
+  #contact #contactForm {
+    width: 280px;
+  }
+  #contact #contactForm input[type=text],
+  #contact #contactForm input[type=email],
+  #contact #contactForm input[type=number],
+  #contact #contactForm input[type=tel],
+  #contact #contactForm textarea {
+    width: 230px;
+  }
+  #contact #contactForm textarea {
+    margin-bottom: 15px;
+  }
+  #footer .logo {
+    padding: 15px 0 40px;
+  }
 }
+
+/*  @media (min-width: 1200px) 
+==============================================================================*/
+
+@media (min-width: 1200px) {
+  #brands .span3 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #about .intro span {
+    display: inline;
+    font: 15px/34px 'Arvo', serif !important;
+    letter-spacing: 0.10em !important;
+  }
+}
+
+/*  @media (min-width: 768px) and (max-width: 979px
+==============================================================================*/
+
+@media (min-width: 768px) and (max-width: 979px) {
+  #header nav a {
+    margin-left: 30px;
+  }
+  #header {
+    height: 400px;
+  }
+  #header header {
+    padding: 30px 0 0;
+  }
+  #header header .span4 {
+    float: none;
+    width: 300px;
+    margin: 0 auto;
+  }
+  #header .logo {
+    top: 85px;
+  }
+  #header .logo a {
+    background-size: 80% 80%;
+  }
+  #header .prod.cups {
+    background-position: 30% 48%;
+    background-size: 28%;
+  }
+  #header .prod.containers {
+    background-size: 50%;
+  }
+  #header .prod.plasticware {
+    background-size: 30%;
+  }
+  #header .prod.straws {
+    background-position: 80% 48%;
+    background-size: 28%;
+  }
+  #header .products {
+    padding-bottom: 20px;
+  }
+  #header nav {
+    padding-bottom: 54px;
+  }
+  body {
+    padding-top: 400px;
+  }
+  #brands h2 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+/*  iPad Only
+==============================================================================*/
+
+@media (max-device-width: 1024px) {
+  body {
+    padding-top: 0;
+  }
+  #header {
+    position: relative;
+  }
+  #header .tri {
+    margin-left: -383px;
+  }
+  #header .prod {
+    position: relative;
+    top: -7px;
+  }
+}
+
+/*  @media (max-width: 767px)
+==============================================================================*/
+
+@media (max-width: 767px) {
+  #header {
+    position: relative;
+    height: 200px;
+  }
+  #header .number {
+    position: relative;
+    z-index: 10;
+  }
+  #header .logo {
+    top: -30px;
+  }
+  #header .logo a {
+    background-size: 50%;
+  }
+  #header .products {
+    padding-bottom: 55px;
+  }
+  #header .bg {
+    min-width: 800px;
+    margin-left: -400px;
+  }
+  #about,
+  #brands .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/*  @media (max-width: 480px)
+==============================================================================*/
+
+@media (max-width: 480px) {
+  .btn {
+    width: 270px;
+  }
+  #header {
+    position: relative;
+    height: 200px;
+  }
+  #header .number {
+    position: relative;
+    z-index: 10;
+  }
+  #header .products {
+    padding-bottom: 55px;
+  }
+  #header .bg {
+    min-width: 600px;
+    margin-left: -300px;
+  }
+  #about .intro {
+    margin-bottom: 50px;
+  }
+  #about .intro span {
+    display: inline;
+    font: 14px/22px 'Arvo', serif !important;
+    letter-spacing: 0.10em !important;
+  }
+  #about {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  #about h2 {
+    margin: 0 0 10px;
+  }
+  #about h2 * {
+    font-size: 12px;
+  }
+  #about h2 .cup-drop {
+    left: -2px;
+    width: 20px;
+    height: 22px;
+    background-size: 100% 100%;
+  }
+  #about .cup-drop {
+    margin: 20px auto;
+  }
+  #brands {
+    padding: 40px 0;
+  }
+  #brands h2 {
+    font: 500 16px/16px 'Arvo', serif;
+  }
+  #brands h3 {
+    padding: 20px 0 40px;
+    font: 500 17px/26px 'Arvo', serif;
+    letter-spacing: 0;
+  }
+  #brands h4 {
+    margin: 0 0 40px 0;
+    font: 500 12px/18px Helvetica, Arial, sans-serif;
+  }
+  #brands .fork {
+    margin: 30px 0 12px;
+    background-size: 70%;
+  }
+  #contact {
+    padding: 50px 0 30px;
+  }
+  #contact h2 {
+    padding: 0 0 50px;
+    font: 500 22px/22px 'Arvo', serif;
+  }
+  #contact #contactForm {
+    width: 280px;
+  }
+  #contact #contactForm input[type=text],
+  #contact #contactForm input[type=email],
+  #contact #contactForm input[type=number],
+  #contact #contactForm input[type=tel],
+  #contact #contactForm textarea {
+    width: 230px;
+  }
+  #contact #contactForm textarea {
+    margin-bottom: 15px;
+  }
+  #footer .logo {
+    padding: 15px 0 40px;
+  }
+}
+
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/

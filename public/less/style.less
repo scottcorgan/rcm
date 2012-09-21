@@ -97,7 +97,7 @@ body {
 ==============================================================================*/
 #header{
   color:#fff;
-  font:14px/14px 'Arvo', serif;
+  font:15px/15px 'Arvo', serif;
   height:@headerHeight;
   overflow:hidden;
   position:fixed;
@@ -138,7 +138,7 @@ body {
   nav{
     padding:0 0 100px;
     text-align:center;
-    text-transform:uppercase;
+    // text-transform:uppercase;
 
     a{
       color:#fff;
@@ -219,7 +219,9 @@ body {
 /*  About
 ============================================================= */
 #about{
+  background:#fff;
   padding:70px 0;
+  position:relative;
   text-align:center;
 
   h2{
@@ -245,6 +247,10 @@ body {
 
   .intro{
     margin:0 0 70px 0;
+
+    span{
+      display:block;
+    }
   }
 }
 
@@ -287,7 +293,7 @@ body {
 
     img{
       background:#000;
-      display:inline-block;
+      display:block;
       height:100%;
       margin:0 auto;
       max-height:245px;
@@ -312,7 +318,9 @@ body {
 /*  Contact
 ============================================================= */
 #contact{
+  background:#fff;
   padding:70px 0;
+  position:relative;
   text-align:center;
 
   h2{
@@ -321,6 +329,7 @@ body {
   }
 
   #contactForm{
+    padding:0 20px;
     margin:0 auto;
     width:350px;
 
@@ -332,14 +341,14 @@ body {
       text-align:center;
     }
 
-    input[type=text],textarea{
+    input[type=text],input[type=email],input[type=number],input[type=tel],textarea{
       text-align:center;
       color:#333;
-      padding:10px 15px;
+      padding:10px 20px;
       margin:0 0 40px;
       display:inline-block;
       font:italic 700 14px/14px 'Arvo', serif;
-      width:320px;
+      width:300px;
       .border-radius(0, 0, 0, 0);
     }
 
@@ -360,7 +369,28 @@ body {
 /*  Footer
 ============================================================= */
 #footer{
+  color:#222;
+  overflow:hidden;
+  position:relative; 
 
+  .logo{
+    padding:40px 0 60px;
+    position:relative;
+    text-align:center;
+    z-index:2;
+
+    h2{
+      font:500 20px/36px 'Arvo', serif;
+    }
+
+    h3{
+      font:500 12px/12px 'Arvo', serif;
+    }
+
+    a{
+      color:#222;
+    }
+  }
 }
 
 
